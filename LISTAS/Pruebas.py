@@ -27,7 +27,7 @@ print("-------------------------------------------------------")
 print(ordenar_lista_ascendente(lista))
 print(ordenar_lista_descendente(lista))
 '''
-
+'''
 test = []
 def ordenar_lista(lista:list):
     
@@ -43,3 +43,14 @@ lista = crear_lista_random(10,1,100)
 
 cargar_legajos_en_lista(test,4)
 print(test)
+'''
+
+valores = [
+    [23,14,52,29],
+    ["a","b","c","d"],
+    ["python",[4,3,8,7]],
+    [True, 3.14, "hola"]
+    ]
+    
+print(valores[3][1])
+print(valores[-1][1])

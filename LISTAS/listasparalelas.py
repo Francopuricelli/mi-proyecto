@@ -2,40 +2,37 @@ from funcionesparalelas_ import *
 from datos import *
 from Listasfunciones import *
 from random import *
-
-legajos = []
-nombres = []
-generos = []
-notasp1 = []
-notasp2 = []
-promedios = []
+TAM = 3
+lista_alumnos = []
 
 #otra manera de lista paralela
-'''  
+
 for _ in range(TAM):
-    aux = int(input("ingrese legajo "))
-    legajos.append(aux)
+    nuevo_alumno = []
+    legajo = int(input("ingrese legajo "))
+    nuevo_alumno.append(legajo)
 
-    aux = input("ingrese nombre ")
-    nombres.append(aux)
+    nombre = input("ingrese nombre ")
+    nuevo_alumno.append(nombre)
 
-    aux = input("ingrese genero ")
-    generos.append(aux)
+    genero= input("ingrese genero ")
+    nuevo_alumno.append(genero)
 
-    aux = int(input("ingrese nota del primer parcial "))
-    notasp1.append(aux)
+    notap1= int(input("ingrese nota del primer parcial "))
+    nuevo_alumno.append(notap1)
 
-    aux = int(input("ingrese nota del segundo parcial "))
-    notasp2.append(aux)
+    notap2= int(input("ingrese nota del segundo parcial "))
+    nuevo_alumno.append(notap2)
 
-    promedios.append(calcular_promedio(notasp1[-1], notasp2[-1])) #el -1 representa el ultimo elemento de la lista
-'''
-
-
-cargar_alumnos(legajos, nombres ,generos , notasp1 , notasp2 , promedios , 15)
-mostrar_alumnos(legajos, nombres ,generos , notasp1 , notasp2 , promedios)
+    nuevo_alumno.append(calcular_promedio(notap1, notap2)) #el -1 representa el ultimo elemento de la lista
 
 
+    lista_alumnos.append(nuevo_alumno)
 
-ordenamiento_nombre(legajos, nombres ,generos , notasp1 , notasp2 , promedios,)
-mostrar_alumnos(legajos, nombres ,generos , notasp1 , notasp2 , promedios)
+#cargar_alumnos(listaa, 5)
+
+
+
+
+ordenamiento_nombre(lista_alumnos)
+mostrar_alumnos(lista_alumnos)

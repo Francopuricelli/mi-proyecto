@@ -1,35 +1,11 @@
-from Calculadora.operaciones import *
-from os import system
+from operaciones import *
+from funciones_calculadora import *
 flag_1 = True
 flag_2 = True
 
 
-
-
-def pausar():
-    system("pause")
-
-def operadores():
-    operador = print("1-sumar")
-    operador = print("2-restar")
-    operador = print("3-dividir")
-    operador = print("4-multiplicar")
-    operador = print("5-factorial")
-    return operador
-
-def menu():
-    print("        Calculadora")
-    print("1-Ingresar primer valor ")
-    print("2-Ingresar segundo valor ")
-    print("3-Elegir operador ")
-    print("4-Salir ")
-    return  input("Ingrese opcion: ")
-
-def salir():
-    salir = input("desea salir? \n (si/no) ")
-    return salir
-
 while True:
+    limpiar_pantalla()
     match menu():
         case "1":
                 if flag_1 == True:
