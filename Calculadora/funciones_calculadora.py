@@ -7,12 +7,11 @@ def pausar():
     system("pause")
 
 def operadores():
-    operador = print("1-sumar")
-    operador = print("2-restar")
-    operador = print("3-dividir")
-    operador = print("4-multiplicar")
-    operador = print("5-factorial")
-    return operador
+    print("1-sumar")
+    print("2-restar")
+    print("3-dividir")
+    print("4-multiplicar")
+    print("5-factorial")
 
 def menu():
     print("        Calculadora")
