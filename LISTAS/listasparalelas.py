@@ -34,5 +34,7 @@ for _ in range(TAM):
 
 
 
-ordenamiento_nombre(lista_alumnos)
+
+mostrar_alumnos(lista_alumnos)
+ordenamiento_alumnos_doble_criterio(lista_alumnos)
 mostrar_alumnos(lista_alumnos)

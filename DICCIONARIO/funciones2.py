@@ -1,5 +1,5 @@
-from Listasfunciones import *
-from datos import *
+from diccionariofunciones import *
+from diccionariodatos import *
 
 LEGAJO = 0
 NOMBRE = 1
@@ -12,8 +12,8 @@ def calcular_promedio (a:int, b:int):
     promedio = (a + b) / 2
     return promedio
 
-def mostrar_alumno(un_alumno:list):
-    print(f"  {un_alumno[LEGAJO]^1}     {un_alumno[NOMBRE]:^12}{un_alumno[GENERO]:^16}{un_alumno[NOTAP1]:^16}{un_alumno[NOTAP2]:^16}   {un_alumno[PROMEDIO]:^5} ") 
+def mostrar_alumno(un_alumno:dict):
+    print(f"  {un_alumno["legajo"]^1}     {un_alumno["nombre"]:^12}{un_alumno["genero"]:^16}{un_alumno["notap1"]:^16}{un_alumno["notap2"]:^16}   {un_alumno["promedio"]:^5} ") 
 
 def mostrar_alumnos(alumnos):
     print("                             ***Lista de alumnos***")
@@ -49,7 +49,16 @@ def cargar_alumnos(alumnos:list, cantidad:int):
             cargar_notas_lista(alumnos[i])
             promediar_lista(alumnos[i])
     
-
+def definir_campo(campo):
+    match campo:
+        case "l":
+            retorno = "legajo"
+        case "n":
+            retorno = "nombre"
+        case "g":
+            retorno = "genero"
+        case "p":
+            retorno = "promedio"
 def ordenamiento_alumnos_doble_criterio(alumnos:list):
     tam = len(alumnos)
     for i in range(tam - 1): 
@@ -62,3 +71,12 @@ def ordenamiento_alumnos_doble_criterio(alumnos:list):
             elif alumnos[i] [GENERO] > alumnos[j][GENERO]:
                 swap_lista(alumnos,i,j)
 
+def new_alumno(legajo,nombre,genero,notap1,notap2):
+    nuevo_alumno = {}
+    nuevo_alumno["legajo"] = legajo
+    nuevo_alumno["nombre"] = nombre
+    nuevo_alumno["genero"] = genero
+    nuevo_alumno["notap1"] = notap1
+    nuevo_alumno["notap2"] = notap2
+    nuevo_alumno["promedio"] = calcular_promedio(notap1,notap2)
+    
